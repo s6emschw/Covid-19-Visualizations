@@ -13,7 +13,7 @@
 \usepackage{mdwlist}
 \usepackage{xfrac}
 \usepackage{setspace}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{subcaption}
 \usepackage{minibox}
 % \usepackage{pdf14} % Enable for Manuscriptcentral -- can't handle pdf 1.5
@@ -81,34 +81,71 @@
 \end{abstract}
 \clearpage
 
-\section{Introduction} % (fold)
+\section*{Introduction} % (fold)
 \label{sec:introduction}
 
-If you are using this template, please cite this item from the references: \citet{GaudeckerEconProjectTemplates}
+%If you are using this template, please cite this item from the references: \citet{GaudeckerEconProjectTemplates}
 
-\citet{Schelling69} example in the code is taken from \citet{StachurskiSargent13}
+%\citet{Schelling69} example in the code is taken from \citet{StachurskiSargent13}
 
-The decision rule of an agent is the following:
-\input{formulas/decision_rule}
+\input{paper_sections/Introduction_EPP}
 
-\begin{figure}
-    \caption{Segregation by cycle in the baseline \citet{Schelling69} model as in the \citet{StachurskiSargent13} example}
+%\begin{figure}
+   % \caption{Segregation by cycle in the baseline \citet{Schelling69} model as in the \citet{StachurskiSargent13} example}
 
-    \includegraphics[width=\textwidth]{../../bld/figures/schelling_baseline}
+    %\includegraphics[width=\textwidth]{../../bld/figures/schelling_baseline}
 
-\end{figure}
+%\end{figure}
 
 
-\begin{figure}
-    \caption{Segregation by cycle in the baseline \citet{Schelling69} model, limiting the number of potential moves per period to two}
+%\begin{figure}
+   % \caption{Segregation by cycle in the baseline \citet{Schelling69} model, limiting the number of potential moves per period to two}
 
-    \includegraphics[width=\textwidth]{../../bld/figures/schelling_max_moves_2}
+    %\includegraphics[width=\textwidth]{../../bld/figures/schelling_max_moves_2}
 
-\end{figure}
+%\end{figure}
 
 % section introduction (end)
 
+\section{Data Gathering and Management} % (fold)
+\label{sec:section1}
 
+\input{paper_sections/Section1_EPP}
+
+% section1 (end)
+
+\section{Calculating the Indicator Sub-index Scores and Resulting Stringency Indices} % (fold)
+\label{sec:section2}
+
+\input{paper_sections/Section2_EPP}
+
+% section2 (end)
+
+\section{Data Visualizations} % (fold)
+\label{sec:section3}
+
+%\input{paper_sections/Section3_EPP}
+
+% section3 (end)
+
+\section{Future Extensions} % (fold)
+\label{sec:section4}
+
+%\input{paper_sections/Section4_EPP}
+
+% section4 (end)
+
+\section*{Concluding Remarks} % (fold)
+\label{sec:conclusion}
+
+%\input{paper_sections/Conclusion_EPP}
+
+% section conclusion (end)
+
+\clearpage
+
+\section*{Bibliography} % (fold)
+\label{sec:bibliography}
 
 
 \setstretch{1}
