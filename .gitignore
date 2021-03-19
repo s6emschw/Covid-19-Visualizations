@@ -4,6 +4,7 @@
 *.bbl
 *.bcf
 *.bib_*.utf8
+*.bld
 *.blg
 *.dvi
 *.ent
@@ -45,7 +46,7 @@ waf3-*
 .*pdfsvn
 __pycache__
 analysis_out
-bld
+
 build
 debug
 Debug
