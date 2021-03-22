@@ -27,7 +27,7 @@ def calculate_sub_index_score(df, policy_value, flag, recorded_flag, maximum):
     return 100 * (numerator / denominator)
 
 
-new_cols_1 = [
+sub_index_scores = [
     "SI_E1",
     "SI_E2",
     "SI_E3",
@@ -38,7 +38,7 @@ new_cols_1 = [
     "SI_S3",
     "SI_S4",
 ]
-scale_cols = [
+ordinal_values = [
     "scale_E1",
     "scale_E2",
     "scale_E3",
@@ -49,7 +49,7 @@ scale_cols = [
     "scale_S3",
     "scale_S4",
 ]
-flag_cols = [
+flag_dummies = [
     "flag_E1",
     "flag_E2",
     "flag_E3",
@@ -60,7 +60,7 @@ flag_cols = [
     "flag_S3",
     "flag_S4",
 ]
-record_cols = [
+recorded_flags = [
     "recorded_flag_E1",
     "recorded_flag_E2",
     "recorded_flag_E3",
@@ -71,7 +71,7 @@ record_cols = [
     "recorded_flag_S3",
     "recorded_flag_S4",
 ]
-max_cols = [
+maxima = [
     "maximum_E1",
     "maximum_E2",
     "maximum_E3",
@@ -82,18 +82,22 @@ max_cols = [
     "maximum_S3",
     "maximum_S4",
 ]
-new_cols_2 = ["E_index_score", "S_index_score", "stringency_index_score"]
-subscore_cols = [new_cols_1[0:4], new_cols_1[5:9], new_cols_1]
+stringency_indices = ["E_index_score", "S_index_score", "stringency_index_score"]
+subscores = [sub_index_scores[0:4], sub_index_scores[5:9], sub_index_scores]
 
 
 @pytask.mark.depends_on(BLD / "data" / "covid_policy.csv")
 @pytask.mark.produces(BLD / "analysis" / "stringency_index_data.csv")
 def task_create_index(depends_on, produces):
     stringency_index_data = pd.read_csv(depends_on).set_index("date")
-    for a, b, c, d, e in zip(new_cols_1, scale_cols, flag_cols, record_cols, max_cols):
-        stringency_index_data[a] = calculate_sub_index_score(
-            stringency_index_data, b, c, d, e
+    for sub_index_score, ordinal_value, flag_dummy, recorded_flag, maximum in zip(
+        sub_index_scores, ordinal_values, flag_dummies, recorded_flags, maxima
+    ):
+        stringency_index_data[sub_index_score] = calculate_sub_index_score(
+            stringency_index_data, ordinal_value, flag_dummy, recorded_flag, maximum
         )
-    for i, j in zip(new_cols_2, subscore_cols):
-        stringency_index_data[i] = stringency_index_data[j].mean(axis=1)
+    for stringency_index, subscore in zip(stringency_indices, subscores):
+        stringency_index_data[stringency_index] = stringency_index_data[subscore].mean(
+            axis=1
+        )
     stringency_index_data.to_csv(produces)
