@@ -6,20 +6,21 @@ from src.config import BLD
 
 def calculate_sub_index_score(df, policy_value, flag, recorded_flag, maximum):
     """Sub Index Score calculates stringency level for each policy category.
-    Inputs:
-        policy_value (integer)  = ordinal scale measurement that represents level of policy
-                                  stringency.
-        flag (integer)          = dummy variable indicating whether or not an indicator
-                                  uses a flag to distinguish between regionally and federally
-                                  employed policies.
-        recorded_flag (integer) = dummy variable indicating whether the policy is implemented
-                                  regionally or federally.
-        maximum (integer)       = maximum ordinal scale value each indicator can take.
-    For further descriptions on inputs, see code book.
-    Output:
-        Output for calculate_sub_index_score is a value between 0 and 100 with 0 indicating no
-        policy restriction in place and 100 indicating the highest level of stringency a policy
-        can take on.
+    Args:
+        df (df): Dataframe
+        policy_value (int): Ordinal scale measurement that represents level of policy
+                            stringency.
+        flag (int): Dummy variable indicating whether or not an indicator
+                    uses a flag to distinguish between regionally and federally
+                    employed policies.
+        recorded_flag (int): Dummy variable indicating whether the policy is implemented
+                             regionally or federally.
+        maximum (int): Maximum ordinal scale value each indicator can take.
+    Note:
+        For more detailed descriptions of args, see code book.
+    Returns:
+        int: A value between 0 and 100 with 0 indicating no policy restriction in place
+        and 100 indicating the highest level of stringency a policy can take on.
     """
     numerator = df[policy_value] - 0.5 * (df[flag] - df[recorded_flag])
     denominator = df[maximum]
