@@ -46,6 +46,7 @@ waf3-*
 __pycache__
 analysis_out
 build
+bld
 debug
 Debug
 final_out
