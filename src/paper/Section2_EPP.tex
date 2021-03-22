@@ -1,16 +1,16 @@
 After completing the data gathering process and producing the subsequent data set, we employed a simple computational procedure inspired by the one used by the Oxford Covid-19 Government Response Tracker to calculate a daily sub-index score for each of our nine indicators. In order to calculate the sub-index scores ($I$) for a given indicator ($j$) on a particular day ($t$), we use the following formula:
 
-\begin{equation*}
+\begin{equation}\label{eq:Eq1}
   I_{j,t} = 100\frac{v_{j,t} - 0.5\left(F_j - f_{j,t}\right)}{N_j}
-\end{equation*}
+\end{equation}
 
 where $v_{j,t}$ is the ordinal value assigned to a policy affiliated with the $j$-th indicator, $N_j$ represents the maximum possible value of the indicator, Fj is the binary variable identifying whether the indicator has a flag variable, and $f_{j,t}$ is the recorded binary flag of the indicator. The formula yields a normalized sub-index value between 0 and 100, which accounts for the differing ordinal measurement scales of the individual indicators. In the case that an indicator uses a flag variable and the recorded flag for a given policy is 0, suggesting that the policy targets only a small region, then the formula subtracts a half point from the ordinal value to reduce the level of stringency associated with the policy measure. Note that if there is no policy implemented for a given indicator (that is, if the ordinal value $v_{j,t}$ is 0), \text{then the function}  $\left(F_{j} - f_{j,t}\right)$ is also treated as 0, yielding a sub-index score ($I_{j,t}$) of zero.
 
 Using the daily sub-index scores computed for each indicator, we produce stringency indices that measure the restrictiveness of social distancing policies targeting schools, private gatherings, and public activities on any given day of the last year. We further calculate an aggregate stringency score that characterizes the overall restrictiveness of social distancing policies identified in our data set. For each of the calculated stringency indices, we apply a simple arithmetic mean from the sub-index scores of the relevant indicators:
 
-\begin{equation*}
+\begin{equation}\label{eq:Eq2}
   \text{$index$} = \frac{1}{k} \sum_{j=1}^{k}I_j
-\end{equation*}
+\end{equation}
 
 where $k$ is the total number of indicators affiliated with a given index and $I_{j}$ is the sub-index score for the $j$-th indicator. Table 1 below summarizes the indicators used to compute the four indices.
 
@@ -28,7 +28,7 @@ where $k$ is the total number of indicators affiliated with a given index and $I
  \hline
  \end{tabular}
  }
- \caption{A summary of the indicators that comprise each index.}
+ \caption{A summary of the indicators that comprise each stringency index.}
 \label{table:1}
 \end{table}
 
