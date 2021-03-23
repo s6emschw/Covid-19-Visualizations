@@ -38,9 +38,6 @@
 \addbibresource{refs.bib}
 
 
-
-
-
 \usepackage[unicode=true]{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -50,9 +47,11 @@
     filecolor=black,
     menucolor=black,
     runcolor=black,
-    urlcolor=black
+    urlcolor=blue
 }
 
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{4.5cm}}
 
 \widowpenalty=10000
 \clubpenalty=10000
@@ -89,9 +88,8 @@ For our final project in Effective Programming Practices for Economists (EPP), w
 \tableofcontents
 \clearpage
 
-
-\listoftables
-\clearpage
+%\listoffigures
+%\clearpage
 
 \pagenumbering{arabic}
 
@@ -143,8 +141,7 @@ For our final project in Effective Programming Practices for Economists (EPP), w
 
 % section3 (end)
 
-\addcontentsline{toc}{section}{Concluding Remarks}
-\section*{Concluding Remarks} % (fold)
+\section{Concluding Remarks} % (fold)
 \label{sec:conclusion}
 
 \input{Concluding_Remarks}
@@ -153,16 +150,47 @@ For our final project in Effective Programming Practices for Economists (EPP), w
 
 \clearpage
 
-\addcontentsline{toc}{section}{Bibliography}
-\section*{Bibliography} % (fold)
-\label{sec:bibliography}
+\addcontentsline{toc}{section}{References}
 
+\input{Bibliography}
+
+% section References (end)
+
+\clearpage
+
+\addcontentsline{toc}{section}{Source Appendix--School Policies}
+\section*{Source Appendix--School Policies} % (fold)
+\label{sec:source appendix school policies}
+
+\input{Source_Appendix_Schools}
+
+% section Source Appendix--School Policies (end)
+
+\clearpage
+
+\addcontentsline{toc}{section}{Source Appendix--Private Gathering Policies}
+\section*{Source Appendix--Private Gathering Policies} % (fold)
+\label{sec:source appendix private gathering policies}
+
+\input{Source_Appendix_Private_Gatherings}
+
+% section Source Appendix--Private Gathering Policies (end)
+
+\clearpage
+
+\addcontentsline{toc}{section}{Source Appendix--Public Activities Policies}
+\section*{Source Appendix--Public Activities Policies} % (fold)
+\label{sec:source appendix public activities policies}
+
+\input{Source_Appendix_Public_Activities}
+
+% section Source Appendix--Public Activities Policies (end)
+
+\clearpage
 
 \setstretch{1}
 \printbibliography
 \setstretch{1.5}
-
-
 
 
 % \appendix
