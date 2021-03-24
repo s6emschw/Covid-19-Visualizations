@@ -1,0 +1,33 @@
+import shutil
+
+import pytask
+
+from src.config import BLD
+from src.config import ROOT
+from src.config import SRC
+
+
+@pytask.mark.latex(
+    [
+        "--pdf",
+        "--interaction=nonstopmode",
+        "--synctex=1",
+        "--cd",
+        "--quiet",
+        "--shell-escape",
+    ]
+)
+@pytask.mark.parametrize(
+    "depends_on, produces",
+    [(SRC / "paper" / "research_paper.tex", BLD / "paper" / "research_paper.pdf")],
+)
+def task_compile_documents():
+    pass
+
+
+@pytask.mark.parametrize(
+    "depends_on, produces",
+    [(BLD / "paper" / "research_paper.pdf", ROOT / "research_paper.pdf")],
+)
+def task_copy_to_root(depends_on, produces):
+    shutil.copy(depends_on, produces)
