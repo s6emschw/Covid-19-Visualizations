@@ -5,7 +5,7 @@ import pytask
 from src.config import BLD
 from src.config import SRC
 
-dates = ["start_date", "end_date"]
+cols = ["start_date", "end_date"]
 start_cols = ["start_date", "row", "scale", "flag", "recorded_flag", "maximum"]
 end_cols = start_cols[:]
 del end_cols[0]
@@ -15,14 +15,21 @@ del wide_cols[0:2]
 
 
 def create_data(df, path):
-    """Cleans and manages date to create covid_policy data frame.
+    """Clean policy data.
+
+    This function cleans and manages data to create 'covid_policy' data frame.
+
     Args:
         df (data frame): Original data in .csv format to be cleaned and managed.
-        path: Path under which resulting covid_policy data frame is to be saved.
+        path           : Path under which resulting 'covid_policy' data frame is to be saved.
+
+    Returns:
+        data frame: covid_policy.csv is used for further analysis.
+
     """
     # Change datatypes
-    for date in dates:
-        df[date] = df[date].astype("datetime64[ns]")
+    for col in cols:
+        df[col] = df[col].astype("datetime64[ns]")
     # Decompose data for every single day from 2020-02-01 to 2021-02-14 for each indicator
     df["row"] = range(len(df))
     starts = df[start_cols].rename(columns={"start_date": "date"})
@@ -42,7 +49,7 @@ def create_data(df, path):
     # Fill missing values
     df_new.replace({-100: np.nan}, inplace=True)
     # Save the data
-    df_new.to_csv(path)
+    return df_new.to_csv(path)
 
 
 @pytask.mark.depends_on(SRC / "original_data" / "policy_data.csv")
