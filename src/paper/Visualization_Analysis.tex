@@ -1,20 +1,135 @@
-Our first visualizations illustrate simple time series plots that track the daily level of contact stringency for all four indices from February 15, 2020 until February 14, 2021. In all four cases, we observe a similar trend, in which the level of contact stringency peaks around mid/late March as the first lockdown phase is introduced and remains elevated until late April/early May once the social distancing policies begin to gradually relax. The policies that characterize the four stringency indices remain comparatively non-restrictive between May and November of 2020 with shops, restaurants, and many entertainment activities open to the public under specific hygiene concepts and as many as 10 individuals from separate households allowed to gather privately. With concerns over the rising incidence level in many regions throughout the country, the stringency level of social distancing measures rises between early November and early January of the following year. As an exception to the above timeline, the German government’s push to avoid another shutdown of schools and childcare programs enables the school stringency index to remain low beyond November until education facilities were ultimately forced to close again in mid-December. The time series plots of our four stringency indices are reproduced in figure 1.
+Our first visualizations illustrate simple time series plots that track the daily level of contact stringency for all four indices from February 15, 2020 until February 14, 2021. In each cases, we observe a similar trend, in which the level of contact stringency peaks around mid/late March as the first lockdown phase is introduced and remains elevated until late April/early May once the social distancing policies begin to gradually relax. The policies that characterize the four stringency indices remain comparatively non-restrictive between May and November of 2020 with shops, restaurants, and many entertainment activities open to the public under specific hygiene concepts and as many as 10 individuals from separate households allowed to gather privately. With concerns over the rising incidence level in many regions throughout the country, the stringency level of social distancing measures rises between early November and early January of the following year. As an exception to the above timeline, the German government’s push to avoid another shutdown of schools and childcare programs enables the school stringency index to remain low beyond November until education facilities were ultimately forced to close again in mid-December. The time series plots of our four stringency indices are reproduced in figure 1.
 
-Insert graphics here.
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{../../bld/figures/Stringency_Index_over_time}
+      \label{fig:five over x}
+      \caption{A simple graph}
+      \label{fig:simplegraph}
+\end{figure}
+
+\begin{figure}[p]
+     \centering
+     \begin{subfigure}[b]{0.72\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Stringency_Index_for_Schools}
+         \caption{}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.72\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Stringency_Index_for_Private Gatherings}
+         \caption{}
+         \label{fig:three sin x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.72\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Stringency_Index_for_Public Activities}
+         \caption{}
+         \label{fig:five over x}
+     \end{subfigure}
+        \caption{Three simple graphs}
+        \label{fig:four graphs}
+\end{figure}
 
 After completing the initial time series visualizations of the stringency indices to observe the development of social distancing policies implemented at the federal level in Germany, we introduce data obtained from the Google Covid-19 Community Mobility Reports in order to observe changes in mobility as levels of contact stringency measured by our four indices vary over time. According to Google, the Community Mobility Reports arose in response to public health officials requiring aggregated, anonymized data to help determine the effectiveness of social distancing policies implemented to alleviate negative health consequences of the Covid-19 pandemic. Google’s mobility data tracks movement trends by region for categories including transit stations, place of work, retail and recreation, grocery stores and pharmacies, and time spent in one’s place of residence. Although the mobility data also observes movement trends in parks, we did not include this category in our visualizations due to the heavy influence of seasonality on park visits. In order to follow these trends consistently over time, Google detects changes in mobility among the categories by creating baseline days that represent a typical level of mobility for each day of the week. The data set then reports a daily “headline number,” which compares mobility on any given day to the baseline day as a positive or negative percentage change.
 
 For our first visualizations implementing the Google mobility data, we generate a series of 12 subplots, which includes three rows of four individual graphs. With each row representing one of the stringency indices for schools, public activities, and private gatherings, respectively, we create four unique subplots by mapping the level of policy stringency against Google’s mobility data for workplaces, transit stations, time spent in place of residence, and retail and recreation. While the graphs display some irregularities, where localized fluctuations appear to contradict the effect on mobility that one would anticipate, we are able to observe generalized trends in the mobility data that are consistent with increasing levels of policy stringency. For example, as the stringency for social distancing policies at schools increases, we observe how mobility percentage changes from the baseline in places of work, transit stations, and retail and recreation locations generally declines. In contrast, as the stringency index for schools rises, time spent at place of residence generally increases. We have reproduced all subplots as a reference below in figure 2.
 
-Using the aggregate stringency index to obtain a representative depiction of social contact restrictions implemented at the federal level in Germany, the time series plots in figure 3 illustrate trends for five of Google’s mobility categories, namely retail and recreation, grocery and pharmacy, transit stations, workplaces, and time spent in one’s place of residence. In so doing, we observe general trends in mobility as the aggregate stringency index rises and falls over time. For the sake of brevity, we will discuss three of the five time series plots in detail and leave the remaining two plots available for further observation in figure 3. While considering the time series plots for retail and recreation and transit stations, an overall pattern becomes clear: the mobility curves for retail and recreation, transit stations, and workplaces tend to hover around the baseline values in the period spanning from mid-February to mid-March of 2020, shortly before the first lockdown begins. As the policy restrictions come into effect and the stringency index subsequently rises, mobility dramatically falls below the baseline values. Mobility gradually increases as social distancing restrictions are relaxed in April/May of 2020 and hover at or just below the baseline level in the period between July and October 2020. Once social distancing policy measures are reintroduced in response to the second wave of the Covid-19 virus, mobility for retail and recreation and transit stations declines to levels observed during the first lockdown period.
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{../../bld/figures/Mobility_vs_Sub_Score_indices}
+      \label{fig:five over x}
+      \caption{A simple graph}
+      \label{fig:simplegraph}
+\end{figure}
 
-Note that workplace mobility reveals a similar pattern during the first lockdown phase, in which there is a distinct drop from the baseline values at the start of the first lockdown, with mobility gradually increasing as some lockdown restrictions were lifted in April/May 2020. However, we as mobility in retail and recreation and in transit stations began to noticeably decline around late October/early November 2020 the trend for workplace mobility remains unchanged until dipping in late December and early January. Given the fact that the observed decline in workplace mobility corresponds with the Christmas holidays and recovers fairly quickly after New Years, we cannot assume that the reduction in workplace mobility around this period is a direct result of increased policy restrictions indicated by the rise in the stringency index. It is possible that similar seasonality effects are visible between July and September 2020, when many employees leave work for summer vacation. Additionally, workplace mobility reveals greater volatility, with significantly shorter phases between peak-to-peak likely due to the typical Monday to Friday workweek in Germany. An interesting pattern that reveals itself in the time series is the fact that there are significant percentage reductions from the baseline values during the workweek, while the opposite seems to occur on days that fall on the weekend, suggesting that employees may be entering their place of work on the weekends to avoid coming into contact with their co-workers. With these observations in mind, it appears that the implemented social distancing restrictions may have been less effective in causing significant changes to the workplace mobility trend due to the influence of particular confounding seasonal effects. Instead, the expectations to social distance seem to have restructured fluctuations in the familiar workweek pattern.
+Using the aggregate stringency index to obtain a representative depiction of social contact restrictions implemented at the federal level in Germany, the time series plots in figure 3 illustrate trends for five of Google’s mobility categories, namely retail and recreation, transit stations, workplaces, grocery and pharmacy, and time spent in one’s place of residence. In so doing, we observe general trends in mobility as the aggregate stringency index rises and falls over time. For the sake of brevity, we will discuss three of the five time series plots in detail and leave the remaining two plots available for further observation in figure 3. While considering the time series plots for retail and recreation and transit stations, an overall pattern becomes clear: the mobility curves for retail and recreation, transit stations, and workplaces tend to hover around the baseline values in the period spanning from mid-February to mid-March of 2020, shortly before the first lockdown begins. As the policy restrictions come into effect and the stringency index subsequently rises, mobility dramatically falls below the baseline values. Mobility gradually increases as social distancing restrictions are relaxed in April/May of 2020 and hover at or just below the baseline level in the period between July and October 2020. Once social distancing policy measures are reintroduced in response to the second wave of the Covid-19 virus, mobility for retail and recreation and transit stations declines to levels observed during the first lockdown period.
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Retail and Recreation_vs_Stringency_Index}
+         \caption{}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Transit Stations_vs_Stringency_Index}
+         \caption{}
+         \label{fig:three sin x}
+     \end{subfigure}
+        \caption{Three simple graphs}
+         \label{fig:four graphs}
+\end{figure}
+
+Note that workplace mobility reveals a similar pattern during the first lockdown phase, in which there is a distinct drop from the baseline values at the start of the first lockdown, with mobility gradually increasing as some lockdown restrictions were lifted in April/May 2020. However, we as mobility in retail and recreation and in transit stations began to noticeably decline around late October/early November 2020 the trend for workplace mobility remains unchanged until dipping in late December and early January. Given the fact that the observed decline in workplace mobility corresponds with the Christmas holidays and recovers fairly quickly after New Years, we cannot assume that the reduction in workplace mobility around this period is a direct result of increased policy restrictions indicated by the rise in the stringency index. It is possible that similar seasonality effects are visible between July and September 2020, when many employees leave work for summer vacation.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{../../bld/figures/Workplaces_vs_Stringency_Index}
+      \label{fig:five over x}
+      \caption{A simple graph}
+      \label{fig:simplegraph}
+\end{figure}
+
+Additionally, workplace mobility reveals greater volatility, with significantly shorter phases between peak-to-peak likely due to the typical Monday to Friday workweek in Germany. An interesting pattern that reveals itself in the time series is the fact that there are significant percentage reductions from the baseline values during the workweek, while the opposite seems to occur on days that fall on the weekend, suggesting that employees may be entering their place of work on the weekends to avoid coming into contact with their co-workers. With these observations in mind, it appears that the implemented social distancing restrictions may have been less effective in causing significant changes to the workplace mobility trend due to the influence of particular confounding seasonal effects. Instead, the expectations to social distance seem to have restructured fluctuations in the familiar workweek pattern.
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Grocery and Pharmacy_vs_Stringency_Index}
+         \caption{}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/Residential_vs_Stringency_Index}
+         \caption{}
+         \label{fig:three sin x}
+     \end{subfigure}
+        \caption{Three simple graphs}
+         \label{fig:four graphs}
+\end{figure}
 
 Figure 4 resembles the time series plots depicted above in figure 3. However, given the research team’s particular interest in the effects of social distancing policies that target school environments, we highlight the individual stringency index for schools and compare it with baseline changes in mobility for the workplace, transit stations, and time spent in one’s place of residence. As is to be expected, the graph reveals a dramatic decrease in workplace and transit station mobility when schools close in mid-March 2020 with a gradual increase thereafter. The trend for both mobility categories remains constant during the summer months as contact restrictions affecting schools are relaxed. Workplace mobility continues to stay constant until mid-December, when the likely seasonality effects of the holidays arise. Despite no change in the school stringency index, transit station mobility trend begins to decline around October (as described above) likely due to the reintroduction of social distancing policies that impact private gatherings and public activities, but not schools. This observation is consistent with the German government’s publicly announced intentions to prevent a second shutdown of schools and childcare facilities.
 
 Additionally, social distancing policies in school environments seem to have increased the amount of time spent in one’s place of residence, generating positive percentage changes from the daily baseline values particularly during the first lockdown between mid-March and early May 2020. As the school stringency index level begins to decline from May to August, so too does the time spent in one’s place of residence. Similar to the trend observed in workplace mobility, the residential mobility trend curve remains constant until mid-October, when lockdown restrictions affecting private gatherings and public activities are reinstated. At the end of December, time spend at home then rises in conjunction with the second school shutdown, but declines slightly after the holidays. As such, although the residential mobility trend curve expresses some degree of co-movement with the school stringency index, we caution that seasonal effects may confound the observed changes in the trend line, especially during the Christmas and New Years holidays.
 
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{../../bld/figures/Mobility_vs_Education_Sub_Score_Index}
+      \label{fig:five over x}
+      \caption{A simple graph}
+      \label{fig:simplegraph}
+\end{figure}
+
 Our final series of plots reproduced in figure 5 make use of a bar chart to track the aggregate stringency level of federally announced social distancing measures over time. Using dark colors to represent lower degrees of stringency and lighter colors to indicate higher levels of stringency, the plot emphasizes the length of each period in which the aggregate index is at a specific level of social contact restrictiveness. In figures 5b and 5c, respectively, we then introduced trend curves depicting the daily number of reported Covid-19 cases and deaths in Germany with data obtained from ourworldindata.org. As evident from the time series plots, the number of new cases and deaths reach their peak during the first lockdown period in early April and mid-April, respectively. The number of Covid-19 cases then sufficiently declines and the stringency level of contact restriction measures begins to relax. As the federal government gradually lifts social distancing restrictions, the number of new cases continues to fall. Although the number of Covid-related deaths remains slightly more persistent than the number of new cases during the later half of the first lockdown, it eventually begins to decline in conjunction with the stringency index.
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.95\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/New Covid-19 Cases_vs_Stringency_Index}
+         \caption{}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.95\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{../../bld/figures/New Covid-19 Deaths_vs_Stringency_Index}
+         \caption{}
+         \label{fig:three sin x}
+     \end{subfigure}
+        \caption{Three simple graphs}
+         \label{fig:four graphs}
+\end{figure}
 
 Between late July and early October, Covid-19 cases are slowly on the rise until they begin to more rapidly increase. Despite this significant change in the number of new cases, the aggregate stringency index remains constant at a level until the beginning of November when the index nearly doubles from a level of approximately 25 to 42. While the newly implemented social distancing restrictions appear to have a small effect in combatting the rise of new cases, this progress is only short-lived, forcing the government to impose a second general lockdown in mid-December with a stringency level of approximately 84. Only with the introduction of the second lockdown do we finally observe a declining trend in new Covid-19 infections. The trend for daily number of Covid-related deaths follows a similar pattern, in which it initially declines between late April and early July. Afterwards, the curve remains constant with fewer than 10 deaths per day until late September, when the number of deaths rises at a fairly constant rate despite the reintroduction of social distancing policies. By mid-January, the number of deaths peaks. Important to note is the persistence of a lag in the number of Covid-related deaths when compared to the development of the trend line for new cases. Furthermore, the plots in figures 5b and 5c suggest that the trend for the number of new cases begins to decline quickly after peaking, while the trend for Covid-related deaths is more persistent, requiring additional time after a peak before it begins to fall.
 
