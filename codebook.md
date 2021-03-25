@@ -71,7 +71,7 @@ First we calculate the Sub Score Index for each of the 9 indicators. Then we cal
 
 The Sub Score Index(_I_) for each indicator (_j_) and for each day (_t_), is calculated by the following formula:
 
-  I_{j,t} = 100\frac{v_{j,t} - 0.5\left(F_j - f_{j,t}\right)}{N_j}
+![formula](https://latex.codecogs.com/png.latex?I_{j,t}&space;=&space;100\frac{v_{j,t}&space;-&space;0.5\left(F_j&space;-&space;f_{j,t}\right)}{N_j})
 
 where,
 - _N<sub>j</sub>_ is the maximum value of the indicator
