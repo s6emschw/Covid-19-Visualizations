@@ -64,6 +64,6 @@ The [**src**](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) dir
 The **bld** directory, which is generated after running Pytask, has the following subdirectories:
 - analysis: contains `stringency_index_data.csv`
 - data: contains `covid_policy.csv`,`df_visuals.csv`
-- documentation: 
+- documentation: contains various output files after compiling final report via pytask. 
 - figures: contains visualizations 
-- paper: 
+- paper: contains final report as generated output, **research_paper.pdf**. 
