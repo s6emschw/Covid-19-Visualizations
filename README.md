@@ -68,4 +68,4 @@ The **bld** directory, which is generated after running Pytask, has the followin
 - figures: contains visualizations 
 - paper: contains final report as generated output, **research_paper.pdf**. 
 
-For convenient access to our [**final report**](https://github.com/s6emschw/EPP-Final-Project/blob/master/research_paper.pdf) and [**codebook documentation**](https://github.com/s6emschw/EPP-Final-Project/blob/master/codebook.md), we have included both files in the [**main**](https://github.com/s6emschw/EPP-Final-Project) directory of our final project as well.
+For convenient access to our [**final report**](https://github.com/s6emschw/EPP-Final-Project/blob/master/research_paper.pdf) and [**codebook**](https://github.com/s6emschw/EPP-Final-Project/blob/master/codebook.md) documentation, we have included both files in the [**main**](https://github.com/s6emschw/EPP-Final-Project) directory of our final project as well.
