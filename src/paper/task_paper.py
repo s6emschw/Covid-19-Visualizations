@@ -29,7 +29,6 @@ def task_compile_documents():
     "depends_on, produces",
     [
         (BLD / "paper" / "research_paper.pdf", ROOT / "research_paper.pdf"),
-        (SRC / "paper" / "codebook.md", ROOT / "codebook.md"),
     ],
 )
 def task_copy_to_root(depends_on, produces):
