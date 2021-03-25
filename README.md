@@ -35,7 +35,7 @@ $ pytask
 **Dependency:** `stringency_index_data.csv`,`death_data.csv`,`DE_Mobility_Report.csv` **Product:** `df_visuals.csv`
 5. Create visualizations <br />
 **Dependency:** `df_visuals.csv` **Product:** 13 images in .png format
-6. Create detailed documentation on data collection and index creation <br />
+6. Create detailed documentation on data collection, computation of indices, and analysis of generated visualizations <br />
 
 ## Project paths
 The [**src**](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) directory contains the following subdirectories:
@@ -67,3 +67,5 @@ The **bld** directory, which is generated after running Pytask, has the followin
 - documentation: contains various output files after compiling final report via pytask. 
 - figures: contains visualizations 
 - paper: contains final report as generated output, **research_paper.pdf**. 
+
+For convenient access to our [**final report**](https://github.com/s6emschw/EPP-Final-Project/blob/master/research_paper.pdf) and [**codebook documentation**](https://github.com/s6emschw/EPP-Final-Project/blob/master/codebook.md), we have included both files in the [**main**](https://github.com/s6emschw/EPP-Final-Project) directory of our final project as well.
