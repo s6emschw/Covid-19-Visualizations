@@ -1,7 +1,7 @@
 ## EPP Final Project (WiSe 2020/21): <br /> <br /> Visualizing the Stringency of Covid-19 Contact Restriction Policies in Germany
 **Emily Anne Schwab and Satwika Vysetty**
 
-This repository contains the final project submitted for the course Effective Programming Practices for Economists (EPP) taught by Professor Hans-Martin von Gaudecker at the University of Bonn. We have used the [template](https://econ-project-templates.readthedocs.io/en/stable/index.html) provided by Professor Gaudecker for structuring our project. For convenient access to our [final report](https://github.com/s6emschw/EPP-Final-Project/blob/master/research_paper.pdf) and [codebook](https://github.com/s6emschw/EPP-Final-Project/blob/master/codebook.md) documentation, we have included both files in the [main](https://github.com/s6emschw/EPP-Final-Project) directory. A concise view of our project and interactive visualizations can be found in this  [Jupyter notebook](https://github.com/s6emschw/EPP-Final-Project/blob/master/src/sandbox/covid_stringency_index_visualisations.ipynb). The paths to other important files can be found [here](#project-paths).
+This repository contains the final project submitted for the course Effective Programming Practices for Economists (EPP) taught by Professor Hans-Martin von Gaudecker at the University of Bonn. We have used the [template](https://econ-project-templates.readthedocs.io/en/stable/index.html) provided by Professor Gaudecker for structuring our project. For convenient access to our [final report](https://github.com/s6emschw/Covid-19-Visualizations/blob/master/research_paper.pdf) and [codebook](https://github.com/s6emschw/Covid-19-Visualizations/blob/master/codebook.md) documentation, we have included both files in the [main](https://github.com/s6emschw/Covid-19-Visualizations) directory. A concise view of our project and interactive visualizations can be found in this [Jupyter notebook](https://github.com/s6emschw/Covid-19-Visualizations/blob/master/src/sandbox/covid_stringency_index_visualisations.ipynb). The paths to other important files can be found [here](#project-paths).
 
 ## Introduction
 <p align="justify">
@@ -10,9 +10,9 @@ For our final project, we collaborated with members of the research team to crea
 </p>
 
 ## Viewing the project
-The project is structured such that all the input files are located in the [src](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) directory and all the output files are in the bld directory, which is generated in the project's root directory after running Pytask. Hence the best way to view this project is to clone it.
+The project is structured such that all the input files are located in the [src](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src) directory and all the output files are in the bld directory, which is generated in the project's root directory after running Pytask. Hence the best way to view this project is to clone it.
 ```
-$ git clone https://github.com/s6emschw/EPP-Final-Project.git
+$ git clone https://github.com/s6emschw/Covid-19-Visualizations.git
 ```
 After cloning the project repository in the desired location, the environment needed for running this project has to be created.
 ```
@@ -38,26 +38,26 @@ $ pytask
 6. Create detailed documentation on data collection, computation of indices, and analysis of generated visualizations
 
 ## Project paths
-The [**src**](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) directory contains the following subdirectories:
-- [analysis](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/analysis):
+The [**src**](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src) directory contains the following subdirectories:
+- [analysis](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/analysis):
    - `task_create_index.py`
-- [data_management](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/data_management):
+- [data_management](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/data_management):
    - `task_create_data.py`
    - `task_prepare_data_for_plotting.py`
-- [documentation](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/documentation)
-- [final](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/final):
+- [documentation](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/documentation)
+- [final](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/final):
    - `task_create_visual_SI_Covid.py`
    - `task_create_visual_SI_Mobility.py`
    - `task_create_visual_SSI_time.py`
    - `task_create_visuals.py`
-- [original_data](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/original_data):
+- [original_data](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/original_data):
    - `policy_data.csv`
    - `death_data.csv`
    - `DE_Mobility_Report.csv`
-- [paper](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/paper):
+- [paper](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/paper):
    - `research_paper.tex`
    - `task_paper.py`
-- [sandbox](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/sandbox):
+- [sandbox](https://github.com/s6emschw/Covid-19-Visualizations/tree/master/src/sandbox):
    - `covid_stringency_index_visualisations.ipynb`
 
 The **bld** directory, which is generated after running Pytask, has the following subdirectories:
