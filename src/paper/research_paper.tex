@@ -17,6 +17,11 @@
 \usepackage{subcaption}
 \usepackage{minibox}
 \usepackage{tocloft}
+
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
 % \usepackage{pdf14} % Enable for Manuscriptcentral -- can't handle pdf 1.5
 % \usepackage{endfloat} % Enable to move tables / figures to the end. Useful for some submissions.
 
@@ -64,13 +69,11 @@
 
 \begin{document}
 
-\title{Visualizating Covid-19 Contact Restriction Policies in Germany\thanks{Emily Anne Schwab, Satwika Vysetty , University of Bonn. Email: \href{mailto:s6emschw@uni-bonn.de, s6savyse@uni-bonn.de}{\nolinkurl{s6emschw [at] uni-bonn [dot] de, s6savyse [at] uni-bonn [dot] de}}.}}
+\title{Visualizating the Stringency of Covid-19 Contact Restriction Policies in Germany\thanks{Emily Anne Schwab, Satwika Vysetty , University of Bonn. Email: \href{mailto:s6emschw@uni-bonn.de, s6savyse@uni-bonn.de}{\nolinkurl{s6emschw [at] uni-bonn [dot] de, s6savyse [at] uni-bonn [dot] de}}.}}
 
 \author{Emily Anne Schwab, Satwika Vysetty}
 
 \date{
-    {\bf Preliminary -- please do not quote}
-    \\[1ex]
     \today
 }
 
@@ -78,10 +81,14 @@
 
 \pagenumbering{roman}
 
-\begin{abstract}
-As a result of the Covid-19 pandemic, governments around the world implemented an array of policy measures to alleviate the enormous strains placed on their country’s healthcare systems and to mitigate the pandemic’s economic consequences for businesses and households alike. Since shortcomings in modern epidemiological models make it difficult to study the potential effects of these policies imposed during the Covid-19 health crisis, researchers at the Bonn Graduate School of Economics (BGSE) and the Institute of Labor Economics (IZA) developed a unique simulation model using agent-based theory to study the social and economic costs of such dynamic policy measures. By understanding the spread of Covid-19 through social contacts as well as the impact of various social distancing policies on reducing the infection and death rates associated with the virus, the research team’s work can assist governments in determining which policy measures are most effective in minimizing negative social and economic outcomes of the pandemic.
+\clearpage
 
-For our final project in Effective Programming Practices for Economists (EPP), we collaborated with members of the research team to create a data set tracking the stringency level of social distancing policies recommended by the German federal government. The data entries for the policy measures begin approximately a month before the start of the first lockdown period, on February 15, 2020 and end a year later on February 14, 2021. In order to capture the stringency level of contact restriction measures that affect various forms of daily social encounters, our data set differentiates between policies that target the education system, private gathering, and public activities such as shopping and entertainment. Upon completing our data set and producing an individual stringency index for each social contact category as well as an aggregate stringency index, we employed mobility data from the Google Covid-19 Community Mobility Reports to produce visualizations that reveal the effects of Germany’s Covid-19 lockdown policies to daily forms of social contact.
+\begin{abstract}
+\noindent As a result of the Covid-19 pandemic, governments around the world implemented an array of policy measures to alleviate the enormous strains placed on their country’s healthcare systems and to mitigate the pandemic’s economic consequences for businesses and households alike. Since shortcomings in modern epidemiological models make it difficult to study the potential effects of these policies imposed during the Covid-19 health crisis, researchers at the Bonn Graduate School of Economics (BGSE) and the Institute of Labor Economics (IZA) developed a unique simulation model using agent-based theory to study the social and economic costs of such dynamic policy measures. By understanding the spread of Covid-19 through social contacts as well as the impact of various social distancing policies on reducing the infection and death rates associated with the virus, the research team’s work can assist governments in determining which policy measures are most effective in minimizing negative social and economic outcomes of the pandemic.
+
+\vspace{6pt}
+
+\noindent For our final project in Effective Programming Practices for Economists (EPP), we collaborated with members of the research team to create a data set tracking the stringency level of social distancing policies recommended by the German federal government. The data entries for the policy measures begin approximately a month before the start of the first lockdown period, on February 15, 2020 and end a year later on February 14, 2021. In order to capture the stringency level of contact restriction measures that affect various forms of daily social encounters, our data set differentiates between policies that target the education system, private gathering, and public activities such as shopping and entertainment. Upon completing our data set and producing an individual stringency index for each social contact category as well as an aggregate stringency index, we employed mobility data from the Google Covid-19 Community Mobility Reports to produce visualizations that reveal the effects of Germany’s Covid-19 lockdown policies to daily forms of social contact.
 \end{abstract}
 \clearpage
 
@@ -89,7 +96,7 @@ For our final project in Effective Programming Practices for Economists (EPP), w
 \clearpage
 
 \listoffigures
-%\clearpage
+\clearpage
 
 \pagenumbering{arabic}
 
@@ -122,7 +129,8 @@ For our final project in Effective Programming Practices for Economists (EPP), w
 
 % section3 (end)
 
-\section{Concluding Remarks} % (fold)
+\addcontentsline{toc}{section}{Concluding Remarks}
+\section*{Concluding Remarks} % (fold)
 \label{sec:conclusion}
 
 \input{Concluding_Remarks}
