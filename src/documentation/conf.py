@@ -45,7 +45,7 @@ source_encoding = "utf-8"
 master_doc = "index"
 
 # General information about the project.
-project = "Visualizating Covid-19 Contact Restriction Policies in Germany"
+project = "Visualizing Covid-19 Contact Restriction Policies in Germany"
 copyright = "2019-, Emily Anne Schwab, Satwika Vysetty "
 
 # The version info for the project you're documenting, acts as replacement for
@@ -101,7 +101,7 @@ html_theme = "haiku"
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-# html_theme_options = {}
+# html_theme_options = {}#
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
@@ -192,7 +192,8 @@ latex_documents = [
     (
         "index",
         "project_documentation.tex",
-        """Documentation of the Visualizating Covid-19 Contact Restriction Policies in Germany project""",
+        """Documentation of the Visualizing Covid-19 Contact Restriction Policies in
+        Germany project""",
         "Emily Anne Schwab, Satwika Vysetty ",
         "manual",
     )
