@@ -20,8 +20,7 @@ titles = [
     "Retail and Recreation",
     "Grocery and Pharmacy",
 ]
-colours = ["#547482", "#C87259", "#F1B05D", "#7A8C87", "#C8B05C"]
-
+colours = ["#818662", "#C87259", "#F1B05D", "#C89D64", "#C8B05C"]
 
 def create_visual_SI_Mobility(df, baseline, title, colour):
     """Create plots of Stringency Index(SI) and Mobility Data over time.
