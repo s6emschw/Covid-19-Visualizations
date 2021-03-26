@@ -1,16 +1,16 @@
-# EPP-Final-Project
-## EPP Project (WiSe 2020/21): Covid-19 Policy Stringency Index in Germany
+## EPP Final Project (WiSe 2020/21): <br /> <br /> Visualizing the Stringency of Covid-19 Contact Restriction Policies in Germany
 **Emily Anne Schwab and Satwika Vysetty**
 
-This repository contains the final project submitted for the course Effective Programming Practices for Economists taught by Professor Hans-Martin von Gaudecker at the University of Bonn. We have used the [template](https://econ-project-templates.readthedocs.io/en/stable/index.html) provided by Professor Gaudecker for structuring our project. 
+This repository contains the final project submitted for the course Effective Programming Practices for Economists (EPP) taught by Professor Hans-Martin von Gaudecker at the University of Bonn. We have used the [template](https://econ-project-templates.readthedocs.io/en/stable/index.html) provided by Professor Gaudecker for structuring our project. For convenient access to our [final report](https://github.com/s6emschw/EPP-Final-Project/blob/master/research_paper.pdf) and [codebook](https://github.com/s6emschw/EPP-Final-Project/blob/master/codebook.md) documentation, we have included both files in the [main](https://github.com/s6emschw/EPP-Final-Project) directory. A concise view of our project and interactive visualizations can be found in this  [Jupyter notebook](https://github.com/s6emschw/EPP-Final-Project/blob/master/src/sandbox/covid_stringency_index_visualisations.ipynb). The paths to other important files can be found [here](#project-paths).
 
 ## Introduction
-As a result of the Covid-19 pandemic, governments around the world implemented an array of policy measures to alleviate the enormous strains placed on their country’s healthcare systems and to mitigate the pandemic’s economic consequences for businesses and households alike. Since shortcomings in modern epidemiological models make it difficult to study the potential effects of these policies imposed during the Covid-19 health crisis, researchers at the Bonn Graduate School of Economics (BGSE) and the Institute of Labor Economics (IZA) developed a unique simulation model using agent-based theory to study the social and economic costs of such dynamic policy measures. By understanding the spread of Covid-19 through social contacts as well as the impact of various social distancing policies on reducing the infection and death rates associated with the virus, the research team’s work can assist governments in determining which policy measures are most effective in minimizing negative social and economic outcomes of the pandemic.
-
-For our final project in Effective Programming Practices for Economists (EPP), we collaborated with members of the research team to create a data set tracking the stringency level of social distancing policies recommended by the German federal government. The data entries for the policy measures begin approximately a month before the start of the first lockdown period, on February 15, 2020 and end a year later on February 14, 2021. In order to capture the stringency level of contact restriction measures that affect various forms of daily social encounters, our data set differentiates between policies that target the education system, private gathering, and public activities such as shopping and entertainment. Upon completing our data set and producing an individual stringency index for each social contact category as well as an aggregate stringency index, we employed mobility data from the Google Covid-19 Community Mobility Reports to produce visualizations that reveal the effects of Germany’s Covid-19 lockdown policies to daily forms of social contact.
+<p align="justify">
+As a result of the Covid-19 pandemic, governments around the world implemented an array of policy measures to alleviate the enormous strains placed on their country’s healthcare systems and to mitigate the pandemic’s economic consequences for businesses and households alike. Since shortcomings in modern epidemiological models make it difficult to study the potential effects of these policies imposed during the Covid-19 health crisis, researchers at the Bonn Graduate School of Economics (BGSE) and the Institute of Labor Economics (IZA) developed a unique simulation model using agent-based theory to study the social and economic costs of such dynamic policy measures. By understanding the spread of Covid-19 through social contacts as well as the impact of various social distancing policies on reducing the infection and death rates associated with the virus, the research team’s work can assist governments in determining which policy measures are most effective in minimizing negative social and economic outcomes of the pandemic. <br />
+For our final project, we collaborated with members of the research team to create a data set tracking the stringency level of social distancing policies recommended by the German federal government. The data entries for the policy measures begin approximately a month before the start of the first lockdown period, on February 15, 2020 and end a year later on February 14, 2021. In order to capture the stringency level of contact restriction measures that affect various forms of daily social encounters, our data set differentiates between policies that target the education system, private gathering, and public activities such as shopping and entertainment. Upon completing our data set and producing an individual stringency index for each social contact category as well as an aggregate stringency index, we employed mobility data from the Google Covid-19 Community Mobility Reports to produce visualizations that reveal the effects of Germany’s Covid-19 lockdown policies to daily forms of social contact.
+</p>
 
 ## Viewing the project
-The project is structured such that all the input files are located in the [src](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) directory and all the output files are in the bld directory, which is generated in the project's root directory after running Pytask. Hence the best way to view this project is to clone it. 
+The project is structured such that all the input files are located in the [src](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) directory and all the output files are in the bld directory, which is generated in the project's root directory after running Pytask. Hence the best way to view this project is to clone it.
 ```
 $ git clone https://github.com/s6emschw/EPP-Final-Project.git
 ```
@@ -26,7 +26,7 @@ $ pytask
 ```
 
 ## Main tasks
-1. Collection of Covid-19 restriction policy data 
+1. Collection of Covid-19 restriction policy data
 2. Clean and manage the Covid-19 restriction policy data <br />
 **Dependency:** `policy_data.csv` **Product:** `covid_policy.csv`
 3. Create Sub-Score Indicies and Stringency Index <br />
@@ -35,37 +35,39 @@ $ pytask
 **Dependency:** `stringency_index_data.csv`,`death_data.csv`,`DE_Mobility_Report.csv` **Product:** `df_visuals.csv`
 5. Create visualizations <br />
 **Dependency:** `df_visuals.csv` **Product:** 13 images in .png format
-6. Create detailed documentation on data collection, computation of indices, and analysis of generated visualizations <br />
+6. Create detailed documentation on data collection, computation of indices, and analysis of generated visualizations
 
 ## Project paths
 The [**src**](https://github.com/s6emschw/EPP-Final-Project/tree/master/src) directory contains the following subdirectories:
 - [analysis](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/analysis):
-   - task_create_index.py
+   - `task_create_index.py`
 - [data_management](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/data_management):
-   - task_create_data.py
-   - task_prepare_data_for_plotting.py
+   - `task_create_data.py`
+   - `task_prepare_data_for_plotting.py`
 - [documentation](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/documentation)
 - [final](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/final):
-   - task_create_visual_SI_Covid.py
-   - task_create_visual_SI_Mobility.py
-   - task_create_visual_SSI_time.py
-   - task_create_visuals.py
+   - `task_create_visual_SI_Covid.py`
+   - `task_create_visual_SI_Mobility.py`
+   - `task_create_visual_SSI_time.py`
+   - `task_create_visuals.py`
 - [original_data](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/original_data):
-   - policy_data.csv
-   - death_data.csv
-   - DE_Mobility_Report.csv
+   - `policy_data.csv`
+   - `death_data.csv`
+   - `DE_Mobility_Report.csv`
 - [paper](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/paper):
-   - research_paper.tex
-   - task_paper.py
-   - codebook.md
+   - `research_paper.tex`
+   - `task_paper.py`
 - [sandbox](https://github.com/s6emschw/EPP-Final-Project/tree/master/src/sandbox):
-   - covid_stringency_index_visualisations.ipynb
+   - `covid_stringency_index_visualisations.ipynb`
 
 The **bld** directory, which is generated after running Pytask, has the following subdirectories:
-- analysis: contains `stringency_index_data.csv`
-- data: contains `covid_policy.csv`,`df_visuals.csv`
-- documentation: contains various output files after compiling final report via pytask. 
-- figures: contains visualizations 
-- paper: contains final report as generated output, **research_paper.pdf**. 
-
-For convenient access to our [**final report**](https://github.com/s6emschw/EPP-Final-Project/blob/master/research_paper.pdf) and [**codebook**](https://github.com/s6emschw/EPP-Final-Project/blob/master/codebook.md) documentation, we have included both files in the [**main**](https://github.com/s6emschw/EPP-Final-Project) directory of our final project as well.
+- analysis:
+   - `stringency_index_data.csv`
+- data:
+   - `covid_policy.csv`,`df_visuals.csv`
+- documentation
+- figures: contains visualizations
+- paper:
+   - `research_paper.pdf`
+---
+ <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
