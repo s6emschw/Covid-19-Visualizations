@@ -71,12 +71,12 @@ def create_visual_SSI_Mobility(df):
              the mobility variable changes.
 
     """
-    sns.set(font_scale=1.65, style="white")
+    sns.set(font_scale=4.5, style="white")
     count = 1
-    plt.subplots(figsize=(40, 30))
+    plt.subplots(figsize=(85, 70))
     plt.suptitle(
         "Deviation in Mobility from Baseline According to Level of Contact Stringency",
-        size=50,
+        size=80,
     )
     for i in scores:
         for t in mobility:
